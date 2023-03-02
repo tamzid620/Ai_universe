@@ -11,11 +11,13 @@ const loadHubs = async() => {
 
 const displayHubs = hubs => {
     const hubsContainer = document.getElementById('hub-container')
+    // display 6 items only-------------
+    hubs = hubs.slice(0,6);
     hubs.forEach(hub =>{
         const hubDiv = document.createElement('div');
         hubDiv.classList.add('col');
         hubDiv.innerHTML = `
-        <div class="card h-100 p-3"  style="height: 900px;">
+        <div class="card  p-3 "  style="height: 550px;">
             <img src="${hub.image}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Features</h5>
@@ -28,7 +30,9 @@ const displayHubs = hubs => {
 }
 
 
+document.getElementById('btn-dekho').addEventListener('click', function(){
 
+})
 
 
 loadHubs();

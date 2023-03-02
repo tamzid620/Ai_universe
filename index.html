@@ -9,12 +9,13 @@
     <!-- css link -->
     <link rel="stylesheet" href="index.css">
   </head>
-  <body>
-    <header>
-        <section class=" heading continer text-center  mb-5">
+  <body class="bg-body-secondary">
+    <header class="text-center  mb-5">
+        <section class="continer ">
             <h1 class=" mt-4 fw-semibold mb-5">AI <span class="text-primary-emphasis">Universe</span> Hub</h1>
             <button class=" bg-info fw-semibold text-white rounded border border-info-subtle p-2 ">Sort By Date</button>
         </section>
+
     </header>
     <main class="container text-center">
         <section>
@@ -22,7 +23,14 @@
 
             </div>
         </section>
-        <button id="btn-dekho" class=" bg-info fw-semibold text-white rounded border border-info-subtle p-2 mt-5">See More</button>
+        <section>
+          <div class="d-flex justify-content-center align-items-center" style="height: 40px;">
+            <div class="spinner-border text-info" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </section>
+        <button id="btn-dekho" class=" bg-info fw-semibold text-white rounded border border-info-subtle p-2 mt-5 mb-5">See More</button>
     </main>
 
 
