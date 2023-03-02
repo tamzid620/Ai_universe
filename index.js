@@ -17,7 +17,7 @@ const displayHubs = hubs => {
         const hubDiv = document.createElement('div');
         hubDiv.classList.add('col');
         hubDiv.innerHTML = `
-        <div class="card  p-3 "  style="height: 550px;">
+        <div class="card  p-3 shadow p-3  bg-body-tertiary rounded"  style="height: 550px;">
             <img src="${hub.image}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Features</h5>
@@ -27,13 +27,21 @@ const displayHubs = hubs => {
         `;
         hubsContainer.appendChild(hubDiv);
     })
+    toggleSpinner(false);
 }
 
 
 document.getElementById('btn-dekho').addEventListener('click', function(){
-
+    toggleSpinner(true);
 })
-
+const toggleSpinner = isLoading => {
+    const spinnerSection = document.getElementById('spinner');
+    if(isLoading){
+        spinnerSection.classList.remove('d-none');
+    }else{
+        loaderSection.classList.add('d-none');
+    }
+}
 
 loadHubs();
 
