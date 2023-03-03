@@ -37,7 +37,8 @@ const displayHubs = (hubs,dataLimit)=> {
                             <p class="card-text text-secondary">${hub.published_in}</p>
                         </div>
                         <div>
-                        <button onclick="loadHubsDetails(${hub.id})" id="btn-motal" class="button bg-info border border-info-subtle"><i class="fa-solid fa-hand-pointer"></i>  </button>
+                        <button onclick="loadHubsDetails(${hub.id})" id="btn-modal" class="button bg-info border border-info-subtle" data-bs-toggle="modal" data-bs-target="#hubDetailModal"><i class="fa-solid fa-hand-pointer"></i>  </button>
+                        
                         </div>
                     </div>
                 </div>
@@ -73,7 +74,17 @@ const loadHubsDetails = async id => {
     const url = `https://openapi.programming-hero.com/api/ai/tool/01`;
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data.data);
+    displayHubDetails(data.data);
+}
+
+const displayHubDetails = hub=> {
+    console.log(hub);
+    const modalTittle = document.getElementById('hubDetailModalLabel')
+    modalTittle.innerText = hub.description;
+    const hubDetails = document.getElementById('hub-details');
+    hubDetails.innerHTML = `
+    
+    `
 }
 
 

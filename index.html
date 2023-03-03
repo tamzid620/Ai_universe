@@ -21,12 +21,14 @@
         
 
     </header>
+<!-- div section  -->
     <main class="container text-center">
         <section>
             <div  id="hub-container" class="row row-cols-1 row-cols-md-3 g-4">
 
             </div>
         </section>
+<!-- spinner section  -->
         <section id="spinner" class="d-none">
           <div class="d-flex justify-content-center align-items-center" style="height: 40px;">
             <div class="spinner-border text-info" role="status">
@@ -34,6 +36,30 @@
             </div>
           </div>
         </section>
+<!-- modal section  -->
+        <section>
+            <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="hubDetailModal" tabindex="-1" aria-labelledby="hubDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="hubDetailModalLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="hub-details" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </section>
+<!-- see more button  -->
         <button id="btn-see-more" class=" d-none bg-info fw-semibold text-white rounded border border-info-subtle p-2 mt-5 mb-5">See More</button>
         
     </main>
