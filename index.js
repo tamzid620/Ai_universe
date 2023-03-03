@@ -29,12 +29,14 @@ const displayHubs = (hubs,dataLimit)=> {
             <img src="${hub.image}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Features</h5>
-                    <p class="card-text text-secondary">${hub.features}</p>
+                    <p class="card-text text-secondary">1.${hub.features[0]}</p>
+                    <p class="card-text text-secondary">2.${hub.features[1]}</p>
+                    <p class="card-text text-secondary">3.${hub.features[2]}</p>
                     <hr>
                     <div class="mt-5 d-flex justify-content-between">
                         <div>
                             <p class="card-text fw-bold">${hub.name}</p>
-                            <p class="card-text text-secondary">${hub.published_in}</p>
+                            <p class="card-text text-secondary">-${hub.published_in}</p>
                         </div>
                         <div>
                         <button onclick="loadHubsDetails(${hub.id})" id="btn-modal" class="button bg-info border border-info-subtle" data-bs-toggle="modal" data-bs-target="#hubDetailModal"><i class="fa-solid fa-hand-pointer"></i>  </button>
@@ -90,29 +92,31 @@ const displayHubDetails = hub=> {
       <p class="fw-bold">${hub.description}</p>
       </h4>
       <div class="d-flex gap-3 ">
-        <div class=" border border-success-subtle p-2 rounded">
+        <div class=" border border-success-subtle bg-white p-2 rounded">
             <p class="text-success">${hub.pricing[0].plan}</p>
             <p class="text-success">${hub.pricing[0].price}</p>
         </div>
-        <div class="border border-danger p-2 rounded">
+        <div class="border border-danger bg-white p-2 rounded">
             <p class="text-danger">${hub.pricing[1].plan}</p>
             <p class="text-danger">${hub.pricing[1].price}</p>
         </div>
-        <div class="border border-warning p-2 rounded">
+        <div class="border border-warning bg-white p-2 rounded">
             <p class="text-warning-emphasis">${hub.pricing[2].plan}</p>
             <p class="text-warning-emphasis">${hub.pricing[2].price}</p>
         </div>
       </div>
-      <div class ="d-flex">
+      <div class ="d-flex gap-5">
         <div>
-        <h5 class="card-title text-start mt-2">Features</h5>
+        <h5 class=" text-start mt-4">Features</h5>
         <p class="text-start text-secondary">1.${hub.features[1].feature_name}</p>
         <p class="text-start text-secondary">2.${hub.features[2].feature_name}</p>
         <p class="text-start text-secondary">3.${hub.features[3].feature_name}</p>
         </div>
         <div>
-        <h5 class="card-title text-start mt-2">Integrations</h5>
+        <h5 class=" text-start mt-4">Integrations</h5>
         <p class="text-start text-secondary">1.${hub.integrations[0]}</p>
+        <p class="text-start text-secondary">1.${hub.integrations[1]}</p>
+        <p class="text-start text-secondary">1.${hub.integrations[2]}</p>
         </div>
       </div>
   </div>
