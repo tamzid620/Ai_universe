@@ -85,32 +85,35 @@ const displayHubDetails = hub=> {
     hubDetails.innerHTML = `
 <section class ="d-flex text-center">
 <div class="row gap-3">
-  <div class="col text-center border border-info bg-info-subtle rounded p-2">
+  <div class="col text-center border border-info rounded p-2">
       <h4>
       <p class="fw-bold">${hub.description}</p>
       </h4>
       <div class="d-flex gap-3 ">
-        <div class=" border border-success-subtle bg-dark-subtle p-2 rounded">
+        <div class=" border border-success-subtle p-2 rounded">
             <p class="text-success">${hub.pricing[0].plan}</p>
             <p class="text-success">${hub.pricing[0].price}</p>
         </div>
-        <div class="border border-danger bg-dark-subtle p-2 rounded">
+        <div class="border border-danger p-2 rounded">
             <p class="text-danger">${hub.pricing[1].plan}</p>
             <p class="text-danger">${hub.pricing[1].price}</p>
         </div>
-        <div class="border border-warning bg-dark-subtle p-2 rounded">
+        <div class="border border-warning p-2 rounded">
             <p class="text-warning-emphasis">${hub.pricing[2].plan}</p>
             <p class="text-warning-emphasis">${hub.pricing[2].price}</p>
         </div>
       </div>
-      <div>
+      <div class ="d-flex">
         <div>
         <h5 class="card-title text-start mt-2">Features</h5>
-        <p></p>
-        <p></p>
-        <p></p>
+        <p class="text-start text-secondary">1.${hub.features[1].feature_name}</p>
+        <p class="text-start text-secondary">2.${hub.features[2].feature_name}</p>
+        <p class="text-start text-secondary">3.${hub.features[3].feature_name}</p>
         </div>
-        <div></div>
+        <div>
+        <h5 class="card-title text-start mt-2">Integrations</h5>
+        <p class="text-start text-secondary">1.${hub.integrations[0]}</p>
+        </div>
       </div>
   </div>
   <div class= "col border border-danger-subtle rounded p-2">
