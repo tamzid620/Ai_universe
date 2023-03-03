@@ -37,7 +37,7 @@ const displayHubs = (hubs,dataLimit)=> {
                             <p class="card-text text-secondary">${hub.published_in}</p>
                         </div>
                         <div>
-                        <button id="btn-motal" class="button bg-info border border-info-subtle"><i class="fa-solid fa-hand-pointer"></i>  </button>
+                        <button onclick="loadHubsDetails(${hub.id})" id="btn-motal" class="button bg-info border border-info-subtle"><i class="fa-solid fa-hand-pointer"></i>  </button>
                         </div>
                     </div>
                 </div>
@@ -64,10 +64,18 @@ const toggleSpinner = isLoading => {
     if(isLoading){
         spinnerSection.classList.remove('d-none');
     }else{
-        loaderSection.classList.add('d-none');
+        spinnerSection.classList.add('d-none');
     }
 
 }
+
+const loadHubsDetails = async id => {
+    const url = `https://openapi.programming-hero.com/api/ai/tool/01`;
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data.data);
+}
+
 
 loadHubs();
 
