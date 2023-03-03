@@ -15,6 +15,13 @@
 #close{
     margin-right: 380px;
 }
+#cross-button{
+    margin-right: -30px;
+    margin-top: -40px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
 
 #modal-img{
     position: relative;
