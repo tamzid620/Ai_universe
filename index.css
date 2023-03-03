@@ -1,12 +1,13 @@
 
 
 
-
+/* default button  */
 .button{
     border-radius: 50%;
     width: 40px;
     height: 40px;
 }
+/* modal compaund */
 .modal-content{
     margin-left: -185px;
 
@@ -14,3 +15,14 @@
 #close{
     margin-right: 380px;
 }
+
+#modal-img{
+    position: relative;
+}
+
+#modal-img-btn{
+    position: absolute;
+    margin-left: -125px;
+    margin-top: 10px;
+}
+

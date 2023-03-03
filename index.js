@@ -122,7 +122,8 @@ const displayHubDetails = hub=> {
   </div>
   <div class= "col border border-danger-subtle rounded p-2">
         <div>
-            <img src="${hub.image_link[0] ? hub.image_link[0] : 'No image found'}" class="rounded" alt="..." style="width: 400px; height: 300px;">
+            <img src="${hub.image_link[0] ? hub.image_link[0] : 'No image found'}" id="modal-img" class=" rounded" alt="..." style="width: 400px; height: 300px;">
+            <button id="modal-img-btn" class=" bg-info fw-semibold text-white rounded border border-info-subtle p-2 ">94% accuracy</button>
         </div>
         <div>
             <p class= "fw-bold text-secondary mt-2">
