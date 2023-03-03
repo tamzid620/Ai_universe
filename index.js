@@ -79,12 +79,53 @@ const loadHubsDetails = async id => {
 
 const displayHubDetails = hub=> {
     console.log(hub);
-    const modalTittle = document.getElementById('hubDetailModalLabel')
-    modalTittle.innerText = hub.description;
+    // const modalTittle = document.getElementById('hubDetailModalLabel')
+    // modalTittle.innerText = hub.description;
     const hubDetails = document.getElementById('hub-details');
     hubDetails.innerHTML = `
-    
-    `
+<section class ="d-flex text-center">
+<div class="row gap-3">
+  <div class="col text-center border border-info bg-info-subtle rounded p-2">
+      <h4>
+      <p class="fw-bold">${hub.description}</p>
+      </h4>
+      <div class="d-flex gap-3 ">
+        <div class=" border border-success-subtle bg-dark-subtle p-2 rounded">
+            <p class="text-success">${hub.pricing[0].plan}</p>
+            <p class="text-success">${hub.pricing[0].price}</p>
+        </div>
+        <div class="border border-danger bg-dark-subtle p-2 rounded">
+            <p class="text-danger">${hub.pricing[1].plan}</p>
+            <p class="text-danger">${hub.pricing[1].price}</p>
+        </div>
+        <div class="border border-warning bg-dark-subtle p-2 rounded">
+            <p class="text-warning-emphasis">${hub.pricing[2].plan}</p>
+            <p class="text-warning-emphasis">${hub.pricing[2].price}</p>
+        </div>
+      </div>
+      <div>
+        <div>
+        <h5 class="card-title text-start mt-2">Features</h5>
+        <p></p>
+        <p></p>
+        <p></p>
+        </div>
+        <div></div>
+      </div>
+  </div>
+  <div class= "col border border-danger-subtle rounded p-2">
+        <div>
+            <img src="${hub.image_link[0] ? hub.image_link[0] : 'No image found'}" class="rounded" alt="..." style="width: 400px; height: 300px;">
+        </div>
+        <div>
+            <p class= "fw-bold text-secondary mt-2">
+            ${hub.input_output_examples[0].output ? hub.input_output_examples[0].output : 'no caption found'}
+            </p>
+        </div>
+  </div>
+</div>
+</section>
+`; 
 }
 
 
